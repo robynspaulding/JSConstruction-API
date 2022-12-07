@@ -21,11 +21,12 @@ Content-Type: application/json
 }
 
 ###About Show
-GET http://localhost:3000/abouts.json
-
+GET http://localhost:3000/abouts/1.json
+Authorization: Bearer {{jwt}}
 
 ###About update
 PATCH http://localhost:3000/abouts/1.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -35,3 +36,40 @@ Content-Type: application/json
 
 ###About destory
 DELETE http://localhost:3000/abouts/1.json
+Authorization: Bearer {{jwt}}
+
+###portfolio Show
+GET http://localhost:3000/portfolios/1.json
+Authorization: Bearer {{jwt}}
+
+###portfolio update
+PATCH http://localhost:3000/portfolios/1.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "job_name": "Pomona House"
+}
+
+
+###portfolio destory
+DELETE http://localhost:3000/abouts/1.json
+Authorization: Bearer {{jwt}}
+
+###Woodshop Show
+GET http://localhost:3000/woodshops/1.json
+Authorization: Bearer {{jwt}}
+
+###Woodshop update
+PATCH http://localhost:3000/woodshops/1.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "item": "Walnut Cutting Board"
+}
+
+
+###Woodshop destory
+DELETE http://localhost:3000/abouts/1.json
+Authorization: Bearer {{jwt}}

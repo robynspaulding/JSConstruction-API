@@ -1,0 +1,2 @@
+class Woodshop < ApplicationRecord
+end

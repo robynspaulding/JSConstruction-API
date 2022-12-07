@@ -1,4 +1,5 @@
 class AboutsController < ApplicationController
+  before_action: authenticate_user, except: [:show]
   def index
     abouts = About.all
     render json: abouts.as_json
