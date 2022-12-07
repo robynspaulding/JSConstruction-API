@@ -1,5 +1,6 @@
 class AboutsController < ApplicationController
-  before_action: authenticate_user, except: [:show]
+  before_action :current_user, except: [:index, :show]
+
   def index
     abouts = About.all
     render json: abouts.as_json
@@ -7,6 +8,7 @@ class AboutsController < ApplicationController
 
   def create
     about = About.new(
+      user_id: current_user.id,
       summary: params[:summary],
       image_url: params[:image_url]
     )

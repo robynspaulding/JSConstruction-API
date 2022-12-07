@@ -1,5 +1,6 @@
 class WoodshopsController < ApplicationController
-  before_action: authenticate_user, except: [:show]
+  before_action :authenticate_user, except: [:index, :show]
+
   def index
     woodshops = Woodshop.all
     render json: woodshops.as_json

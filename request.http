@@ -1,4 +1,4 @@
-@jwt = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzA0NzA2NTN9.pG5wUQO_nvv57P__DgnQzQgU_ounWUQkgsEtLKIuYTY"
+@jwt = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzA0NzcwMTh9.JOTtcbt3iE17x3ZS7nuSxiLoKLMpwlrIYO1-0a-7LX0"
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
@@ -22,7 +22,6 @@ Content-Type: application/json
 
 ###About Show
 GET http://localhost:3000/abouts/1.json
-Authorization: Bearer {{jwt}}
 
 ###About update
 PATCH http://localhost:3000/abouts/1.json
@@ -30,7 +29,7 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "summary": "My name is Jordan Spaulding. I am the owner and operator of Jordan Spaulding Construction liscenced to work in California. I have been working on my building skills my whole life!"
+  "summary": "_____My name is Jordan Spaulding. I am the owner and operator of Jordan Spaulding Construction liscenced to work in California. I have been working on my building skills my whole life!"
 }
 
 
@@ -40,7 +39,6 @@ Authorization: Bearer {{jwt}}
 
 ###portfolio Show
 GET http://localhost:3000/portfolios/1.json
-Authorization: Bearer {{jwt}}
 
 ###portfolio update
 PATCH http://localhost:3000/portfolios/1.json
@@ -58,7 +56,6 @@ Authorization: Bearer {{jwt}}
 
 ###Woodshop Show
 GET http://localhost:3000/woodshops/1.json
-Authorization: Bearer {{jwt}}
 
 ###Woodshop update
 PATCH http://localhost:3000/woodshops/1.json

@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
-  before_action: authenticate_user, except: [:show]
+  before_action :authenticate_user, except: [:index, :show]
+
   def index
     portfolios = Portfolio.all
     render json: portfolios.as_json
