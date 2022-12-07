@@ -8,13 +8,14 @@ class PortfoliosController < ApplicationController
 
   def create
     portfolio = Portfolio.new(
+      user_id: current_user.id,
       job_name: params[:job_name],
       description: params[:description],
       image_url: params[:image_url]
     )
 
     portfolio.save
-    render json: portfolios.as_json
+    render json: portfolio.as_json
   end
 
   def show

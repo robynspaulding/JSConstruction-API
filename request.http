@@ -1,4 +1,4 @@
-@jwt = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzA0NzcwMTh9.JOTtcbt3iE17x3ZS7nuSxiLoKLMpwlrIYO1-0a-7LX0"
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzA1MTkyNTJ9.ZNl89qPVKeMzzeayQjaes-5-DHNdfanu_WwHgXCaRFs
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
@@ -20,6 +20,19 @@ Content-Type: application/json
   "password": "password"
 }
 
+###About Index
+GET http://localhost:3000/abouts.json
+
+###About Create
+POST http://localhost:3000/abouts.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json 
+
+{
+  "summary": "Hi, my name is Jordan and I have been the owner and operator of JSConstruction since 2015...",
+  "image_url": "https://ibb.co/S3Vx5MZ"
+}
+
 ###About Show
 GET http://localhost:3000/abouts/1.json
 
@@ -32,10 +45,23 @@ Content-Type: application/json
   "summary": "_____My name is Jordan Spaulding. I am the owner and operator of Jordan Spaulding Construction liscenced to work in California. I have been working on my building skills my whole life!"
 }
 
-
 ###About destory
-DELETE http://localhost:3000/abouts/1.json
+DELETE http://localhost:3000/abouts/3.json
 Authorization: Bearer {{jwt}}
+
+###Portfolio Index
+GET http://localhost:3000/portfolios.json
+
+###Portfolio Create
+POST http://localhost:3000/portfolios.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json 
+
+{
+  "job_name": "Bathroom Remodel",
+  "description": "Updated tub and tile surround in a comercial restroom",
+  "image_url": "https://img.freepik.com/free-vector/renovation-repair-works-isometric-composition-with-character-worker-with-toolbox-bathroom_1284-63232.jpg?w=2000"
+}
 
 ###portfolio Show
 GET http://localhost:3000/portfolios/1.json
@@ -50,9 +76,23 @@ Content-Type: application/json
 }
 
 
-###portfolio destory
-DELETE http://localhost:3000/abouts/1.json
+###Portfolio destory
+DELETE http://localhost:3000/portfolios/2.json
 Authorization: Bearer {{jwt}}
+
+###Woodshop Index
+GET http://localhost:3000/woodshops.json
+
+###Woodshop Create
+POST http://localhost:3000/woodshops.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "item": "Decorative tray",
+  "description": "With a hexagonal shape, multiple types and colors of wood, and gold handles this tray makes a great searving board or decorative piece. price: $175 + shipping",
+  "image_url": "https://i.pinimg.com/originals/8f/a4/7a/8fa47a4554ebd53229963b6264445c4b.png"
+}
 
 ###Woodshop Show
 GET http://localhost:3000/woodshops/1.json
@@ -63,10 +103,9 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "item": "Walnut Cutting Board"
+  "item": "Cutting Board"
 }
 
-
 ###Woodshop destory
-DELETE http://localhost:3000/abouts/1.json
+DELETE http://localhost:3000/woodshops/1.json
 Authorization: Bearer {{jwt}}

@@ -8,13 +8,14 @@ class WoodshopsController < ApplicationController
 
   def create
     woodshop = Woodshop.new(
+      user_id: current_user.id,
       item: params[:item],
       description: params[:description],
       image_url: params[:image_url]
     )
 
     woodshop.save
-    render json: woodshops.as_json
+    render json: woodshop.as_json
   end
 
   def show

@@ -1,5 +1,5 @@
 class AboutsController < ApplicationController
-  before_action :current_user, except: [:index, :show]
+  before_action :authenticate_user, except: [:index, :show]
 
   def index
     abouts = About.all
@@ -32,7 +32,7 @@ class AboutsController < ApplicationController
 
   def destroy
     about = About.find_by(id: params[:id])
-    photo.destroy
+    about.destroy
     render json: {message: "Selection successfully destoryed."}
   end
 end
