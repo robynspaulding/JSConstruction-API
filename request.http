@@ -1,10 +1,21 @@
+@jwt = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzA0NzA2NTN9.pG5wUQO_nvv57P__DgnQzQgU_ounWUQkgsEtLKIuYTY"
+
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Admin 1",
-  "email": "Admin1@test.com",
+  "name": "Admin 2",
+  "email": "Admin2@test.com",
   "password": "password",
   "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "Admin1@test.com",
+  "password": "password"
 }
