@@ -19,3 +19,19 @@ Content-Type: application/json
   "email": "Admin1@test.com",
   "password": "password"
 }
+
+###About Show
+GET http://localhost:3000/abouts.json
+
+
+###About update
+PATCH http://localhost:3000/abouts/1.json
+Content-Type: application/json
+
+{
+  "summary": "My name is Jordan Spaulding. I am the owner and operator of Jordan Spaulding Construction liscenced to work in California. I have been working on my building skills my whole life!"
+}
+
+
+###About destory
+DELETE http://localhost:3000/abouts/1.json

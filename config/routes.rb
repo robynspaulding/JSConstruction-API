@@ -9,4 +9,11 @@ Rails.application.routes.draw do
 
   #Sessions
   post "/sessions" => "sessions#create"
+
+  #About routes
+  get "/abouts" => "abouts#index"
+  post "/abouts" => "abouts#create"
+  get "/abouts/:id" => "abouts#show"
+  patch "abouts/:id" => "abouts#update"
+  delete "abouts/:id" => "abouts#destroy"
 end
