@@ -2,7 +2,7 @@
 
 # Jordan Spaulding Construction Website API 
 Ruby on Rails API
-
+The goal for this API is to be the database for a construction website that will house the company's profiles/About section, protfolio and Woodshop inventory and allow for the owner to access the database  and update each section as needed from the front end.
 
 
 # Technology used:
