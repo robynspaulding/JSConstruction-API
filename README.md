@@ -15,7 +15,7 @@ More to come ...
 ## Installation
 
 ```bash
-git clone https://github.com/robynspaulding/where_to_next_api.git
+git clone https://github.com/robynspaulding/JSConstruction-API.git
 bundle install
 rails db:create db:migrate db:seed
 ```
@@ -30,4 +30,4 @@ You can test web requests as documented in the `requests.http` file.
 
 ## Future plans
 
-The goal for this API is to become a database for a construction website that will house the company's profiles/About section, protfilio and Woodshop inventory that the owner can update as needed from the front end
+The goal for this API is to become a database for a construction website that will house the company's profiles/About section, protfolio and Woodshop inventory that the owner can update as needed from the front end
