@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzA1MTkyNTJ9.ZNl89qPVKeMzzeayQjaes-5-DHNdfanu_WwHgXCaRFs
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzA2OTQ3MzZ9.f0OQ5y6siA9qr_9PB7r7R2apjtKGpe9auNnKoXr7DXc
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
@@ -42,7 +42,7 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "summary": "_____My name is Jordan Spaulding. I am the owner and operator of Jordan Spaulding Construction liscenced to work in California. I have been working on my building skills my whole life!"
+  "summary": "My name is Jordan Spaulding. I am the owner and operator of Jordan Spaulding Construction liscenced to work in California. I have been working on my building skills my whole life!"
 }
 
 ###About destory
@@ -58,7 +58,7 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json 
 
 {
-  "job_name": "Bathroom Remodel",
+  "job_name": "Test delete Remodel",
   "description": "Updated tub and tile surround in a comercial restroom",
   "image_url": "https://img.freepik.com/free-vector/renovation-repair-works-isometric-composition-with-character-worker-with-toolbox-bathroom_1284-63232.jpg?w=2000"
 }
