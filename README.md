@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Jordan Spaulding Construction Website API 
+Ruby on Rails API
 
-Things you may want to cover:
+Where To Next? is a travel planning app that allows a user to create a trip and add places they want to visit while they are on that trip. Within the trip show page -or rather where you can see the details of the trip and the places you want to go - there is a search bar that accesses a third-party API called <a href="https://serpapi.com/"> SerpApi </a> which scrapes Google results based on your search query and location input. 
 
-* Ruby version
+# Technology used:
+- <a href="https://github.com/robynspaulding/JSConstruction-API">Ruby on Rails backend - This Repo!</a>
+- <a href="https://github.com/robynspaulding/JSConstruction-React-frontend">React.js frontend</a>
+More to come ...
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+## Installation
 
-* Database initialization
+```bash
+git clone https://github.com/robynspaulding/where_to_next_api.git
+bundle install
+rails db:create db:migrate db:seed
+```
 
-* How to run the test suite
+## Usage
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+rails server
+```
 
-* Deployment instructions
+You can test web requests as documented in the `requests.http` file.
 
-* ...
+## Future plans
+
+The goal for this API is to become a database for a construction website that will house the company's profiles/About section, protfilio and Woodshop inventory that the owner can update as needed from the front end
